@@ -1,0 +1,26 @@
+{
+  "name": "node-architecture-starter",
+  "version": "1.0.0",
+  "description": "Nodejs design architecture that you can resuse to avoid rendundace work",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cmigayi/node-architecture-starter.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cmigayi/node-architecture-starter/issues"
+  },
+  "homepage": "https://github.com/cmigayi/node-architecture-starter#readme",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "path": "^0.12.7",
+    "readline": "^1.3.0",
+    "replace-in-file": "^6.1.0"
+  }
+}
