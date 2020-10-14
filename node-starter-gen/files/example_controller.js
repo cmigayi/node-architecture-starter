@@ -46,8 +46,6 @@ var getCustomer = (req, res) => {
           'status': 'success',
           'trip': {
             'customer_id': customer.customer_id,
-            'fname': customer.fname,
-            'lname': customer.lname,
             'date_time': customer.date_time
           }
         }
@@ -110,8 +108,6 @@ var updateCustomer = (req, res) => {
     }
     console.log(JSON.stringify(req.body));
     customer.customerCustomerId = req.body.customer_id;
-    customer.customerFname = req.body.fname;
-    customer.customerLname = req.body.lname;
 
     customerModel.updateCustomer(customer, function(result){
       console.log("status: "+result);
