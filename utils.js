@@ -30,7 +30,7 @@ function replaceItem(entity, dir, project){
     const fd = fs.openSync(des, "r");
     fs.fchmod(fd, 0o777, (err) => {
       if(err) console.log("error: "+err);
-      console.log("File permission change succcessful");
+      console.log("File permission change successful");
       // Replace string
       const options = {
         files: des,
@@ -39,7 +39,7 @@ function replaceItem(entity, dir, project){
       };
       replaceInFile(options, (err) => {
         if(err) console.log("error: "+err);
-        console.log("File content replacement succcessful");
+        console.log("File content replacement successful");
       });
     });
 }
@@ -50,7 +50,18 @@ function createDir(dataDir){
   }
 }
 
+function copyGenerateFile(project){
+  fs.copyFile(
+    path.resolve('../'+project+'/node_modules/node-architecture-starter/node-starter-gen/files/generate_entity.js'),
+    path.resolve('../'+project+'/'),
+    (err) => {
+      if(err) console.log("error: "+err);
+      console.log("generate_entity.js file created succcessful");
+  });
+}
+
 module.exports = {
   createFileAndCopyContent,
-  createDir
+  createDir,
+  copyGenerateFile
 }

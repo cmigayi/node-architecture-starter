@@ -10,7 +10,7 @@ const rl = readline.createInterface({
 
 rl.question(`Enter the project name: `, (project) => {
 
-rl.question(`Create directories (data, models, controllers, routes, test): Y/N`, (reply) => {
+rl.question(`Create directories (data, models, controllers, routes, test). Choose Y/N: `, (reply) => {
   if(reply === 'N' || reply === 'n'){
     // exit
     rl.close();
@@ -22,6 +22,7 @@ rl.question(`Create directories (data, models, controllers, routes, test): Y/N`,
   utils.createDir('./controllers');
   utils.createDir('./routes');
   utils.createDir('./test');
+  utils.copyGenerateFile(project);
 
   rl.question(`Current project (${project}), Enter entity name (Data model):`, (entity) => {
     /*
