@@ -1,6 +1,6 @@
 {
   "name": "node-architecture-starter",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Nodejs design architecture that you can resuse to avoid rendundace work",
   "main": "app.js",
   "scripts": {
@@ -10,7 +10,12 @@
     "type": "git",
     "url": "git+https://github.com/cmigayi/node-architecture-starter.git"
   },
-  "keywords": ["mvc", "node-mvc", "design", "architecture"],
+  "keywords": [
+    "mvc",
+    "node-mvc",
+    "design",
+    "architecture"
+  ],
   "author": "Cecil Migayi",
   "license": "ISC",
   "bugs": {
