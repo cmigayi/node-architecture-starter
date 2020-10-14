@@ -8,6 +8,7 @@ const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });
+
 rl.question(`Create directories (data, models, controllers, routes, test): Y/N`, (reply) => {
   if(reply == 'N' || reply == 'n'){
     // exit
