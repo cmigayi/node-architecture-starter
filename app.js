@@ -2,18 +2,19 @@ const fs = require('fs');
 const path = require('path');
 const readline = require('readline');
 const utils = require('./utils');
-const pjson = require('./package.json');
 
 const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });
 
-rl.question(`Enter the project name: `, (reply) => {
+rl.question(`Enter the project name: `, (project) => {
 
 rl.question(`Create directories (data, models, controllers, routes, test): Y/N`, (reply) => {
-  if(reply == 'N' || reply == 'n'){
+  if(reply === 'N' || reply === 'n'){
     // exit
+    rl.close();
+    process.exit(0);
   }
 
   utils.createDir('./data');
@@ -22,7 +23,7 @@ rl.question(`Create directories (data, models, controllers, routes, test): Y/N`,
   utils.createDir('./routes');
   utils.createDir('./test');
 
-  rl.question(`Current project (${pjson.name}), Enter entity name (Data model):`, (entity) => {
+  rl.question(`Current project (${project}), Enter entity name (Data model):`, (entity) => {
     /*
     Get the files, create and copy content from files folder where appropriate
     */
@@ -31,6 +32,7 @@ rl.question(`Create directories (data, models, controllers, routes, test): Y/N`,
     utils.createFileAndCopyContent(
       entity,
       'data',
+      project,
       'example_data.js'
     );
 
@@ -38,6 +40,7 @@ rl.question(`Create directories (data, models, controllers, routes, test): Y/N`,
     utils.createFileAndCopyContent(
       entity,
       'controllers',
+      project,
       'example_controller.js'
     );
 
@@ -45,6 +48,7 @@ rl.question(`Create directories (data, models, controllers, routes, test): Y/N`,
     utils.createFileAndCopyContent(
       entity,
       'routes',
+      project,
       'example_route.js'
     );
 
@@ -52,6 +56,7 @@ rl.question(`Create directories (data, models, controllers, routes, test): Y/N`,
     utils.createFileAndCopyContent(
       entity,
       'models',
+      project,
       'example_model.js'
     );
 
@@ -59,6 +64,7 @@ rl.question(`Create directories (data, models, controllers, routes, test): Y/N`,
     utils.createFileAndCopyContent(
       entity,
       'test',
+      project,
       'example_test.js'
     );
   });

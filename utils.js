@@ -1,12 +1,11 @@
 const fs = require('fs');
 const path = require('path');
 const replaceInFile = require('replace-in-file');
-const pjson = require('./package.json');
 
-function createFileAndCopyContent(entity, dir, copyFrom){
+function createFileAndCopyContent(entity, dir, project, copyFrom){
   // Add file path
-  var des = path.resolve('../'+pjson.name+'/'+dir+'/'+entity+'.js');
-  var copyFromUrl = path.resolve('../'+pjson.name+'/node-starter-gen/files/'+copyFrom);
+  var des = path.resolve('../'+project+'/'+dir+'/'+entity+'.js');
+  var copyFromUrl = path.resolve('../'+project+'/node-starter-gen/files/'+copyFrom);
 
   fs.writeFile(des, "", { flag: 'wx' }, (err) => {
     if(err) console.log("write error: "+err);
@@ -14,16 +13,17 @@ function createFileAndCopyContent(entity, dir, copyFrom){
       if(err){
         console.log("Copy error: "+err);
       }else{
-        replaceItem(entity, dir);
+        replaceItem(entity, dir, project);
         console.log("Copied from "+copyFromUrl+" successfully");
+        console.log("If everything is successfully, you can exit the console (Ctrl + C)");
       }
     });
   });
 }
 
-function replaceItem(entity, dir){
+function replaceItem(entity, dir, project){
   // Add file path
-  var des = path.resolve('../'+pjson.name+'/'+dir+'/'+entity+'.js');
+  var des = path.resolve('../'+project+'/'+dir+'/'+entity+'.js');
 
   // Capitalize entity first letter
   capitalizedEntity = entity.charAt(0).toUpperCase() + entity.slice(1);
