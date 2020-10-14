@@ -9,6 +9,8 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 
+rl.question(`Enter the project name: `, (reply) => {
+
 rl.question(`Create directories (data, models, controllers, routes, test): Y/N`, (reply) => {
   if(reply == 'N' || reply == 'n'){
     // exit
@@ -60,4 +62,5 @@ rl.question(`Create directories (data, models, controllers, routes, test): Y/N`,
       'example_test.js'
     );
   });
+});
 });
