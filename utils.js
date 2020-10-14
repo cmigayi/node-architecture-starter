@@ -5,7 +5,7 @@ const replaceInFile = require('replace-in-file');
 function createFileAndCopyContent(entity, dir, project, copyFrom){
   // Add file path
   var des = path.resolve('../'+project+'/'+dir+'/'+entity+'.js');
-  var copyFromUrl = path.resolve('../'+project+'/node-starter-gen/files/'+copyFrom);
+  var copyFromUrl = path.resolve('../'+project+'/node_modules/node-architecture-starter/node-starter-gen/files/'+copyFrom);
 
   fs.writeFile(des, "", { flag: 'wx' }, (err) => {
     if(err) console.log("write error: "+err);
