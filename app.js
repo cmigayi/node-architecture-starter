@@ -2,13 +2,15 @@ const fs = require('fs');
 const path = require('path');
 const readline = require('readline');
 const utils = require('./utils');
+const pjson = require('../../package.json');
+
+// Get project name from project package.json file
+var project = pjson.name;
 
 const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });
-
-rl.question(`Enter the project name: `, (project) => {
 
 rl.question(`Create directories (data, models, controllers, routes, test). Choose Y/N: `, (reply) => {
   if(reply === 'N' || reply === 'n'){
@@ -68,5 +70,4 @@ rl.question(`Create directories (data, models, controllers, routes, test). Choos
       'example_test.js'
     );
   });
-});
 });
