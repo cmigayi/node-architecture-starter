@@ -10,7 +10,7 @@ customer.get(
 
 customer.get(
   "/customer/:id",
-  customerController.getCustomersById
+  customerController.getCustomerById
 );
 
 customer.post(
