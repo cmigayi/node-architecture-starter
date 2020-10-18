@@ -22,7 +22,6 @@ rl.question(`Create directories (data, models, controllers, routes, test). Choos
   utils.createDir('./controllers');
   utils.createDir('./routes');
   utils.createDir('./test');
-  utils.copyGenerateFile(project);
 
   rl.question(`Current project (${project}), Enter entity name (Data model):`, (entity) => {
     /*

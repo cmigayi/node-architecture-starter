@@ -50,18 +50,7 @@ function createDir(dataDir){
   }
 }
 
-function copyGenerateFile(project){
-  fs.copyFile(
-    path.resolve('../'+project+'/node_modules/node-architecture-starter/node-starter-gen/files/generate_entity.js'),
-    path.resolve('../'+project+'/'),
-    (err) => {
-      if(err) console.log("error: "+err);
-      console.log("generate_entity.js file created succcessful");
-  });
-}
-
 module.exports = {
   createFileAndCopyContent,
-  createDir,
-  copyGenerateFile
+  createDir
 }
