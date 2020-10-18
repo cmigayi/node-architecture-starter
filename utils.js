@@ -9,7 +9,7 @@ function askQuestion2(project, rl){
     */
 
     //Data
-    utils.createFileAndCopyContent(
+    createFileAndCopyContent(
       entity,
       'data',
       project,
@@ -17,7 +17,7 @@ function askQuestion2(project, rl){
     );
 
     // Controller
-    utils.createFileAndCopyContent(
+    createFileAndCopyContent(
       entity,
       'controllers',
       project,
@@ -25,7 +25,7 @@ function askQuestion2(project, rl){
     );
 
     // Route;
-    utils.createFileAndCopyContent(
+    createFileAndCopyContent(
       entity,
       'routes',
       project,
@@ -33,7 +33,7 @@ function askQuestion2(project, rl){
     );
 
     // Model
-    utils.createFileAndCopyContent(
+    createFileAndCopyContent(
       entity,
       'models',
       project,
@@ -41,7 +41,7 @@ function askQuestion2(project, rl){
     );
 
     // Test
-    utils.createFileAndCopyContent(
+    createFileAndCopyContent(
       entity,
       'test',
       project,
