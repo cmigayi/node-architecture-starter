@@ -14,28 +14,28 @@ Inside your project directory:
 5. Type __Y__ when prompted to __Create directories (data, models, controllers, routes, test). Choose Y/N:__
 6. Next, provide an __entity name__ (All small letters) when prompted to __Current project (testProject2), Enter entity name (Data model):__. Note: __entity name__ is a name of a table in your database.
 7. You should see a list of successful messages displayed as shown below:
-* *If everything is successfully, you can exit the console (Ctrl + C)
-* *File permission change successful
-* *File permission change successful
-* *File permission change successful
-* *File permission change successful
-* *File permission change successful
-* *File content replacement successful
-* *File content replacement successful
-* *File content replacement successful
-* *File content replacement successful
-* *File content replacement successful
+* _If everything is successfully, you can exit the console (Ctrl + C)
+* _File permission change successful
+* _File permission change successful
+* _File permission change successful
+* _File permission change successful
+* _File permission change successful
+* _File content replacement successful
+* _File content replacement successful
+* _File content replacement successful
+* _File content replacement successful
+* _File content replacement successful
 
 8. As a result of action 5, your project should appear as shown below. _Items in __block__ are the recent generated directories:
-* *__controllers__ 
-* *__models__
-* *__routes__
-* *__data__ 
-* *__test__
-* *node_modules
-* *generate.js 
-* *package-lock.json
-* *package.json
+* ___controllers__ 
+* ___models__
+* ___routes__
+* ___data__ 
+* ___test__
+* _node_modules
+* _generate.js 
+* _package-lock.json
+* _package.json
 
 9. As a result of action 6, in each of the following directories (controllers, models, routes, data, test), you should find a file named as __entity name__ you provided with prewritten nodejs code.
 
